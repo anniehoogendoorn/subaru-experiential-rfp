@@ -1,0 +1,257 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+body {
+  color: #4d4d4d;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-weight: bold;
+  letter-spacing: .03em;
+}
+h1 {
+  font-size: 3.8em;
+  text-align: center;
+}
+
+
+h2 {
+  font-size: 2.4em;
+  color: #4d4d4d;
+}
+
+
+p {
+  color: #333;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 2.8em;
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+  .img-slider {
+    overflow: hidden;
+  }
+}
+
+header {
+  background: url(/assets/img/header-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #B0B681;
+  height: 700px;
+  position: relative;
+  margin-bottom: 80px;
+  text-align: center;
+  h1  {
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+  }
+  img {
+    width: 225px;
+  }
+  @media screen and (max-width: 425px) {
+    img {
+      width: 150px;
+    }
+  }
+  .subaru {
+    padding-top: 70px;
+  }
+  .circle {
+    background: white;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    img {
+      width: 40px;
+      padding-top: 40px;
+
+    }
+  }
+}
+
+// For responsive vimeo videos
+.video-container {
+  position: relative;
+	padding-bottom: 54.25%;
+	padding-top: 25px;
+	height: 0;
+	// overflow: hidden;
+  margin-bottom: 40px;
+  @media #{$xxlarge-up} {
+    .video-container {
+      padding-bottom: 53.25%;
+    }
+  }
+  iframe {
+    position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  }
+
+}
+
+.intro,
+.case-studies,
+.stories,
+.cause-marketing,
+.heavy-metal,
+.momentous-events {
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    padding: 0 50px;
+    // margin-bottom: 30px;
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+
+  .intro,
+  .case-studies,
+  .stories,
+  .cause-marketing,
+  .heavy-metal,
+  .momentous-events {
+    p {
+      padding: 0 0;
+    }
+  }
+
+}
+
+
+
+.intro {
+  margin-bottom: 20px;
+  p {
+    font-size: 1.5em;
+  }
+  .cta {
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.4em;
+  }
+}
+
+.stories {
+  img {
+    width: 100%;
+  }
+  .img-slider {
+    margin-bottom: 50px;
+  }
+
+}
+
+.cause-marketing {
+  img {
+    width: 100%;
+  }
+  .img-slider {
+    margin-bottom: 50px;
+  }
+}
+
+footer {
+  text-align: center;
+  img {
+    width: 225px;
+    padding-bottom: 120px;
+  }
+  @media screen and (max-width: 425px) {
+    img {
+      width: 150px;
+    }
+  }
+}
+
+// Slick Slider Custom Styles
+.slick-prev {
+  z-index: 9999;
+}
+.slick-prev:before {
+	   content: url(/assets/img/arrow-left.png);
+}
+
+.slick-next:before {
+	content: url(/assets/img/arrow-right.png);
+}

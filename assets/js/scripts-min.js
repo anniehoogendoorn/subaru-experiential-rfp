@@ -1,0 +1,2 @@
+$(document).foundation(),$(document).ready(function(){$(function(){$('a[href*="#"]:not([href="#"])').click(function(){if(location.pathname.replace(/^\//,"")===this.pathname.replace(/^\//,"")&&location.hostname===this.hostname){var e=$(this.hash);if(e=e.length?e:$("[name="+this.hash.slice(1)+"]"),e.length)return $("html, body").animate({scrollTop:e.offset().top},1e3),!1}})}),$(".img-slider").slick({slidesToShow:1,slidesToScroll:1,autoplay:!1,dots:!0,speed:500,autoplaySpeed:1e4,cssEase:"ease"})});
+//# sourceMappingURL=./scripts-min.js.map
